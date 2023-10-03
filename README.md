@@ -20,7 +20,7 @@ The test coverage of this application is on the lower side. This was a deliberat
 - Dependency injection for enhanced testability.
 - Code modularization to ensure components can be tested in isolation.
 - Utilizing design patterns that favor testable units of code.
-- 
+
 It's worth to recognize that while the tests show some of the application's reliability, a more extensive test suite would be crucial for a production-ready version of the app.
 
 # Future Improvements
