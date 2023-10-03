@@ -13,6 +13,8 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var retryButton: UIButton!
+    @IBOutlet weak var retryLabel: UILabel!
     var viewModel: MovieListViewModel!
     weak var coordinator: MovieListCoordinator?
 
@@ -28,18 +30,43 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableView.automaticDimension
 
-        self.viewModel.delegate = self
-        
+        self.viewModel.delegate = self      
+        self.setErrorState(false)
         configureLoadingFooter()
         
+        self.requestContent()
+    }
+    
+    func requestContent() {
         viewModel.fetchMovies { [weak self] in
+            self?.setErrorState(false)
             self?.tableView.reloadData()
+        } errorHandler: {
+            self.setErrorState(true)
         }
     }
     
     func configureLoadingFooter() {
         let footerView = LoadingFooterView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
         tableView.tableFooterView = footerView
+    }
+    
+    func setErrorState(_ state: Bool) {
+        
+        self.retryLabel.text = StringConstants.genericErrorMessgae
+        if state {
+            self.retryLabel.isHidden = false
+            self.retryButton.isHidden = false
+            self.tableView.isHidden = true
+        } else {
+            self.retryLabel.isHidden = true
+            self.retryButton.isHidden = true
+            self.tableView.isHidden = false
+        }
+    }
+    
+    @IBAction func retryAction(_ sender: Any) {
+        self.requestContent()
     }
     
     //MARK: - DataSource
@@ -72,10 +99,13 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.row == viewModel.numberOfMovies() - 1 && !viewModel.isLoading {
             tableView.tableFooterView?.isHidden = false
             viewModel.fetchMovies {
+                self.setErrorState(false)
                 tableView.reloadData()
                 if !self.viewModel.isLoading {
                     tableView.tableFooterView?.isHidden = true
                 }
+            } errorHandler: {
+                self.setErrorState(true)
             }
         }
     }

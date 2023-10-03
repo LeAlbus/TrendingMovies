@@ -28,7 +28,6 @@ class MovieDetailsViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-       // setupViews()
     }
         
     private func setupImages() {
@@ -48,6 +47,7 @@ class MovieDetailsViewController: UIViewController {
     
     private func setupViews() {
         edgesForExtendedLayout = []
+        self.view.clipsToBounds = true
         titleLabel.text = viewModel.title
         overviewLabel.text = viewModel.description
         let gradientLayer = CAGradientLayer()

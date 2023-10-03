@@ -22,43 +22,43 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l6N-XT-oYr">
-                    <rect key="frame" x="-171" y="-48" width="756" height="504"/>
+                    <rect key="frame" x="-144" y="-48" width="702" height="468"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="l6N-XT-oYr" secondAttribute="height" multiplier="3:2" id="zdt-pg-T4K"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g96-2d-ylz" userLabel="FadeView">
-                    <rect key="frame" x="0.0" y="-16" width="414" height="266"/>
+                    <rect key="frame" x="0.0" y="-16" width="414" height="214"/>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loq-Mj-MSP" userLabel="TitleBackground">
-                    <rect key="frame" x="0.0" y="408" width="414" height="48"/>
+                    <rect key="frame" x="0.0" y="372" width="414" height="48"/>
                     <color key="backgroundColor" red="0.20231958759999999" green="0.20231958759999999" blue="0.20231958759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="YmW-tt-SqJ"/>
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PosterPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="posterImageViewID">
-                    <rect key="frame" x="107" y="100" width="200" height="300"/>
+                    <rect key="frame" x="107" y="48" width="200" height="300"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="JtL-Cf-iCa"/>
                         <constraint firstAttribute="width" secondItem="posterImageViewID" secondAttribute="height" multiplier="2:3" id="zaI-ci-nbM"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabelID">
-                    <rect key="frame" x="157.5" y="420" width="99.5" height="24"/>
+                    <rect key="frame" x="157.5" y="368" width="99.5" height="56"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="overviewTitleLabelID">
-                    <rect key="frame" x="169" y="464" width="76.5" height="21"/>
+                    <rect key="frame" x="169" y="444" width="76.5" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the overview of the movie. It will give a brief summary of what the movie is about." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="overviewLabelID">
-                    <rect key="frame" x="57" y="495" width="300" height="33.5"/>
+                    <rect key="frame" x="57" y="475" width="300" height="33.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                 <constraint firstItem="l6N-XT-oYr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Oli-1h-7sB"/>
                 <constraint firstItem="loq-Mj-MSP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RFe-Dp-uDu"/>
                 <constraint firstAttribute="trailing" secondItem="loq-Mj-MSP" secondAttribute="trailing" id="V9a-VH-XuO"/>
-                <constraint firstItem="loq-Mj-MSP" firstAttribute="top" secondItem="posterImageViewID" secondAttribute="bottom" constant="8" id="Xi8-P9-mi5"/>
+                <constraint firstItem="loq-Mj-MSP" firstAttribute="top" secondItem="posterImageViewID" secondAttribute="bottom" constant="24" id="Xi8-P9-mi5"/>
                 <constraint firstItem="l6N-XT-oYr" firstAttribute="bottom" secondItem="loq-Mj-MSP" secondAttribute="bottom" id="coK-jr-6ji"/>
                 <constraint firstAttribute="centerX" secondItem="overviewLabelID" secondAttribute="centerX" id="overviewCenterX"/>
                 <constraint firstItem="overviewLabelID" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="overviewLeading"/>
@@ -80,7 +80,7 @@
                 <constraint firstItem="overviewLabelID" firstAttribute="top" secondItem="overviewTitleLabelID" secondAttribute="bottom" constant="10" id="overviewTop"/>
                 <constraint firstAttribute="trailing" secondItem="overviewLabelID" secondAttribute="trailing" constant="57" id="overviewTrailing"/>
                 <constraint firstAttribute="centerX" secondItem="posterImageViewID" secondAttribute="centerX" id="posterCenterX"/>
-                <constraint firstItem="posterImageViewID" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="posterTop"/>
+                <constraint firstItem="posterImageViewID" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="posterTop"/>
                 <constraint firstItem="titleLabelID" firstAttribute="centerY" secondItem="loq-Mj-MSP" secondAttribute="centerY" id="qmR-q8-Sxl"/>
                 <constraint firstAttribute="centerX" secondItem="titleLabelID" secondAttribute="centerX" id="titleCenterX"/>
                 <constraint firstItem="titleLabelID" firstAttribute="top" secondItem="posterImageViewID" secondAttribute="bottom" constant="20" id="titleTop"/>

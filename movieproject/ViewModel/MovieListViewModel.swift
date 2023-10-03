@@ -22,7 +22,7 @@ class MovieListViewModel {
 
     init() {}
     
-    func fetchMovies(completion: @escaping () -> Void) {
+    func fetchMovies(completion: @escaping () -> Void, errorHandler: @escaping () -> Void) {
         
         guard !isLoading else { return }
         isLoading = true
@@ -38,8 +38,9 @@ class MovieListViewModel {
                 }
             case .failure(let error):
                 print("Failed to fetch movies:", error)
+                self?.paging = 1
                 DispatchQueue.main.async {
-                    completion()
+                    errorHandler()
                 }
             }
         }
