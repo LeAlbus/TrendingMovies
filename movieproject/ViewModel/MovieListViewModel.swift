@@ -7,7 +7,13 @@
 
 import Foundation
 
+protocol MovieListViewModelDelegate: AnyObject {
+    func didSelectMovie(_ movie: Movie)
+}
+
 class MovieListViewModel {
+    
+    weak var delegate: MovieListViewModelDelegate?
     
     private var movies: [Movie] = []
     var reloadData: (() -> Void)?

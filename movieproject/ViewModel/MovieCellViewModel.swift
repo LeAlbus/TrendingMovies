@@ -6,16 +6,26 @@
 //
 
 import Foundation
+import UIKit
 
 class MovieCellViewModel {
 
     let title: String
     let year: String
-    let posterURL: URL
+    let posterURL: String
 
     init(movie: Movie) {
         self.title = movie.title
         self.year = movie.year
         self.posterURL = movie.posterURL
+    }
+    
+    func retrieveMoviePoster(completion: @escaping (UIImage?) -> Void) {
+        
+        if let fullURL = URL(string: APIConstants.posterURL(posterURL, size: .small)){
+            NetworkServices.shared.fetchPosterImage(from: fullURL) { image in
+                completion(image)
+            }
+        }
     }
 }

@@ -30,8 +30,9 @@ class MovieListCoordinator: Coordinator {
         navigationController.pushViewController(moviesViewController, animated: false)
     }
     
-    func didSelectMovie(_ movie: Movie) {
-        let movieDetailCoordinator = MovieDetailCoordinator(movie: movie, navigationController: navigationController)
-        movieDetailCoordinator.start()
+    func showMovieDetail(for movie: Movie) {
+        let detailCoordinator = MovieDetailCoordinator(movie: movie, navigationController: navigationController)
+        childCoordinators.append(detailCoordinator)
+        detailCoordinator.start()
     }
 }

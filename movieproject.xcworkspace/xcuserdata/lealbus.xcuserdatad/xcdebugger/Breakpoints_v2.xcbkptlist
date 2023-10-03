@@ -7,49 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CC514718-1263-4308-95C1-21CD53EE3085"
+            uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movieproject/Views/MovieListViewController.swift"
+            filePath = "movieproject/Views/Cells/MovieTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1AD4021C-DFC5-4634-819E-3D51673BCAB8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "movieproject/ViewModel/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchMovies(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FDD4121C-C532-4168-BEAF-477797CCD96C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "movieproject/ViewModel/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "fetchMovies(completion:)"
-            landmarkType = "7">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewModel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
+                  moduleName = "movieproject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
+                  moduleName = "movieproject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
+                  moduleName = "movieproject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+               <Location
+                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
+                  moduleName = "movieproject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

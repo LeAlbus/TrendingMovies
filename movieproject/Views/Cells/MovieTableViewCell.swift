@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 
 class MovieTableViewCell: UITableViewCell {
 
@@ -18,13 +19,11 @@ class MovieTableViewCell: UITableViewCell {
     var viewModel: MovieCellViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
+            
             titleLabel.text = viewModel.title
             yearLabel.text = viewModel.year
+            movieImageView.image = UIImage(named: "PosterPlaceholder")
         }
-    }
-    
-    func clearPoster() {
-        self.movieImageView.image = UIImage(named: "PosterPlaceholder")
     }
     
     override func awakeFromNib() {

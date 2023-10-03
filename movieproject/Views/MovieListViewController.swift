@@ -28,7 +28,8 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableView.automaticDimension
 
-        // TODO: Replace mock with request
+        self.viewModel.delegate = self
+        
         viewModel.fetchMovies { [weak self] in
             self?.tableView.reloadData()
         }
@@ -40,17 +41,30 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", 
+                                                 for: indexPath) as! MovieTableViewCell
         let movieViewModel = viewModel.viewModelForMovie(at: indexPath.row)
         cell.viewModel = movieViewModel
+        
+        movieViewModel.retrieveMoviePoster { [weak cell] image in
+            DispatchQueue.main.async {
+                cell?.movieImageView.image = image ?? UIImage(named: "PosterPlaceholder")
+            }
+        }
+        
         return cell
     }
     
     //MARK: - Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = viewModel.movieAtIndex(indexPath.row)
-        let detailsVC = MovieDetailsViewController(nibName: "MovieDetailsViewController", bundle: nil)
-        detailsVC.movie = movie
-        navigationController?.pushViewController(detailsVC, animated: true)
+        viewModel.delegate?.didSelectMovie(movie)
     }
 }
+
+extension MovieListViewController: MovieListViewModelDelegate {
+    func didSelectMovie(_ movie: Movie) {
+        coordinator?.showMovieDetail(for: movie)
+    }
+}
+ 

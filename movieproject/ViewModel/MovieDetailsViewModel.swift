@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MovieDetailsViewModel {
     
@@ -15,7 +16,7 @@ class MovieDetailsViewModel {
         return movie.title
     }
     
-    var posterURL: URL {
+    var posterURL: String {
         return movie.posterURL
     }
 
@@ -25,5 +26,14 @@ class MovieDetailsViewModel {
 
     init(movie: Movie) {
         self.movie = movie
+    }
+    
+    func retrieveMoviePoster(completion: @escaping (UIImage?) -> Void) {
+        
+        if let fullURL = URL(string: APIConstants.posterURL(posterURL, size: .full)){
+            NetworkServices.shared.fetchPosterImage(from: fullURL) { image in
+                completion(image)
+            }
+        }
     }
 }

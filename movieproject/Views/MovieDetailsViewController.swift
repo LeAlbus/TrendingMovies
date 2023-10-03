@@ -14,20 +14,22 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     
-    var movie: Movie!
     var viewModel: MovieDetailsViewModel!
     weak var coordinator: MovieDetailCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupViews()
     }
 
     private func setupViews() {
-        titleLabel.text = movie.title
-        overviewLabel.text = movie.description
-        posterImageView.af.setImage(withURL: movie.posterURL)
+        titleLabel.text = viewModel.title
+        overviewLabel.text = viewModel.description
+        viewModel.retrieveMoviePoster { [weak self] image in
+            DispatchQueue.main.async {
+                self?.posterImageView.image = image ?? UIImage(named: "PosterPlaceholder")
+            }
+        }
     }
 }
 
