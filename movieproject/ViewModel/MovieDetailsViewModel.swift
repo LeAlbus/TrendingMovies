@@ -14,10 +14,6 @@ class MovieDetailsViewModel {
     var title: String {
         return movie.title
     }
-
-    var year: String {
-        return movie.year
-    }
     
     var posterURL: URL {
         return movie.posterURL

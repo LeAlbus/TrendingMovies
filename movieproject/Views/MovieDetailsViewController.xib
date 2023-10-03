@@ -1,10 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22129"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailsViewController" customModule="movieproject" customModuleProvider="target">
+            <connections>
+                <outlet property="overviewLabel" destination="overviewLabelID" id="w9B-Zi-Hod"/>
+                <outlet property="posterImageView" destination="posterImageViewID" id="JqU-fH-q4N"/>
+                <outlet property="titleLabel" destination="titleLabelID" id="G71-J6-Ut1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="CXe-LS-HHF"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PosterPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="posterImageViewID">
+                    <rect key="frame" x="52.5" y="100" width="309.5" height="464"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabelID">
+                    <rect key="frame" x="157.5" y="584" width="99.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="overviewTitleLabelID">
+                    <rect key="frame" x="169" y="628" width="76.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the overview of the movie. It will give a brief summary of what the movie is about." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="overviewLabelID">
+                    <rect key="frame" x="57" y="659" width="300" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="overviewLabelID" secondAttribute="centerX" id="overviewCenterX"/>
+                <constraint firstItem="overviewLabelID" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="overviewLeading"/>
+                <constraint firstAttribute="centerX" secondItem="overviewTitleLabelID" secondAttribute="centerX" id="overviewTitleCenterX"/>
+                <constraint firstItem="overviewTitleLabelID" firstAttribute="top" secondItem="titleLabelID" secondAttribute="bottom" constant="20" id="overviewTitleTop"/>
+                <constraint firstItem="overviewLabelID" firstAttribute="top" secondItem="overviewTitleLabelID" secondAttribute="bottom" constant="10" id="overviewTop"/>
+                <constraint firstAttribute="trailing" secondItem="overviewLabelID" secondAttribute="trailing" constant="57" id="overviewTrailing"/>
+                <constraint firstAttribute="centerX" secondItem="posterImageViewID" secondAttribute="centerX" id="posterCenterX"/>
+                <constraint firstItem="posterImageViewID" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="posterTop"/>
+                <constraint firstAttribute="centerX" secondItem="titleLabelID" secondAttribute="centerX" id="titleCenterX"/>
+                <constraint firstItem="titleLabelID" firstAttribute="top" secondItem="posterImageViewID" secondAttribute="bottom" constant="20" id="titleTop"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="136"/>
+        </view>
     </objects>
+    <resources>
+        <image name="PosterPlaceholder" width="309.5" height="464"/>
+    </resources>
 </document>

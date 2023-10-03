@@ -23,7 +23,6 @@ class MovieDetailCoordinator: Coordinator {
         let movieDetailVC = MovieDetailsViewController()
         let movieDetailViewModel = MovieDetailsViewModel(movie: movie)
         movieDetailVC.viewModel = movieDetailViewModel
-        
         movieDetailVC.coordinator = self
 
         navigationController.pushViewController(movieDetailVC, animated: true)

@@ -48,7 +48,9 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //MARK: - Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: Show movie details
-        tableView.deselectRow(at: indexPath, animated: true)
+        let movie = viewModel.movieAtIndex(indexPath.row)
+        let detailsVC = MovieDetailsViewController(nibName: "MovieDetailsViewController", bundle: nil)
+        detailsVC.movie = movie
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }

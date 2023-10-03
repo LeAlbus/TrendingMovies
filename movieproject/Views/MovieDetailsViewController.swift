@@ -9,21 +9,25 @@ import Foundation
 import UIKit
 
 class MovieDetailsViewController: UIViewController {
-    
-    // MARK: - Outlets
-    @IBOutlet weak var movieImageView: UIImageView!
+
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
     
-    // ViewModel for the movie details
+    var movie: Movie!
     var viewModel: MovieDetailsViewModel!
     weak var coordinator: MovieDetailCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViews()
+    }
 
-        titleLabel.text = viewModel.title
-        yearLabel.text = viewModel.year
-      
+    private func setupViews() {
+        titleLabel.text = movie.title
+        overviewLabel.text = movie.description
+        posterImageView.af.setImage(withURL: movie.posterURL)
     }
 }
+
