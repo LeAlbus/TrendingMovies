@@ -23,6 +23,10 @@ class MovieTableViewCell: UITableViewCell {
         }
     }
     
+    func clearPoster() {
+        self.movieImageView.image = UIImage(named: "PosterPlaceholder")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

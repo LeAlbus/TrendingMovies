@@ -24,6 +24,9 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
 
         // TODO: Replace mock with request
         viewModel.fetchMovies { [weak self] in
