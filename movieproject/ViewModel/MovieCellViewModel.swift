@@ -23,7 +23,7 @@ class MovieCellViewModel {
     func retrieveMoviePoster(completion: @escaping (UIImage?) -> Void) {
         
         if let fullURL = URL(string: APIConstants.posterURL(posterURL, size: .small)){
-            NetworkServices.shared.fetchPosterImage(from: fullURL) { image in
+            NetworkServices.shared.fetchImage(from: fullURL) { image in
                 completion(image)
             }
         }

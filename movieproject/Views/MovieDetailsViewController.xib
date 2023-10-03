@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailsViewController" customModule="movieproject" customModuleProvider="target">
             <connections>
+                <outlet property="backdropImageView" destination="l6N-XT-oYr" id="Z4U-o5-sEU"/>
+                <outlet property="fadeView" destination="g96-2d-ylz" id="viY-pT-jcj"/>
                 <outlet property="overviewLabel" destination="overviewLabelID" id="w9B-Zi-Hod"/>
                 <outlet property="posterImageView" destination="posterImageViewID" id="JqU-fH-q4N"/>
                 <outlet property="titleLabel" destination="titleLabelID" id="G71-J6-Ut1"/>
@@ -19,23 +21,44 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l6N-XT-oYr">
+                    <rect key="frame" x="-171" y="-48" width="756" height="504"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="l6N-XT-oYr" secondAttribute="height" multiplier="3:2" id="zdt-pg-T4K"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g96-2d-ylz" userLabel="FadeView">
+                    <rect key="frame" x="0.0" y="-16" width="414" height="266"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loq-Mj-MSP" userLabel="TitleBackground">
+                    <rect key="frame" x="0.0" y="408" width="414" height="48"/>
+                    <color key="backgroundColor" red="0.20231958759999999" green="0.20231958759999999" blue="0.20231958759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="YmW-tt-SqJ"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PosterPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="posterImageViewID">
-                    <rect key="frame" x="52.5" y="100" width="309.5" height="464"/>
+                    <rect key="frame" x="107" y="100" width="200" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="JtL-Cf-iCa"/>
+                        <constraint firstAttribute="width" secondItem="posterImageViewID" secondAttribute="height" multiplier="2:3" id="zaI-ci-nbM"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabelID">
-                    <rect key="frame" x="157.5" y="584" width="99.5" height="24"/>
+                    <rect key="frame" x="157.5" y="420" width="99.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="overviewTitleLabelID">
-                    <rect key="frame" x="169" y="628" width="76.5" height="21"/>
+                    <rect key="frame" x="169" y="464" width="76.5" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the overview of the movie. It will give a brief summary of what the movie is about." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="overviewLabelID">
-                    <rect key="frame" x="57" y="659" width="300" height="33.5"/>
+                    <rect key="frame" x="57" y="495" width="300" height="33.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -43,6 +66,13 @@
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="g96-2d-ylz" firstAttribute="bottom" secondItem="posterImageViewID" secondAttribute="centerY" id="4lq-1v-SBv"/>
+                <constraint firstItem="g96-2d-ylz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="GcN-Cs-1So"/>
+                <constraint firstItem="l6N-XT-oYr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Oli-1h-7sB"/>
+                <constraint firstItem="loq-Mj-MSP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RFe-Dp-uDu"/>
+                <constraint firstAttribute="trailing" secondItem="loq-Mj-MSP" secondAttribute="trailing" id="V9a-VH-XuO"/>
+                <constraint firstItem="loq-Mj-MSP" firstAttribute="top" secondItem="posterImageViewID" secondAttribute="bottom" constant="8" id="Xi8-P9-mi5"/>
+                <constraint firstItem="l6N-XT-oYr" firstAttribute="bottom" secondItem="loq-Mj-MSP" secondAttribute="bottom" id="coK-jr-6ji"/>
                 <constraint firstAttribute="centerX" secondItem="overviewLabelID" secondAttribute="centerX" id="overviewCenterX"/>
                 <constraint firstItem="overviewLabelID" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="overviewLeading"/>
                 <constraint firstAttribute="centerX" secondItem="overviewTitleLabelID" secondAttribute="centerX" id="overviewTitleCenterX"/>
@@ -51,11 +81,15 @@
                 <constraint firstAttribute="trailing" secondItem="overviewLabelID" secondAttribute="trailing" constant="57" id="overviewTrailing"/>
                 <constraint firstAttribute="centerX" secondItem="posterImageViewID" secondAttribute="centerX" id="posterCenterX"/>
                 <constraint firstItem="posterImageViewID" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="posterTop"/>
+                <constraint firstItem="titleLabelID" firstAttribute="centerY" secondItem="loq-Mj-MSP" secondAttribute="centerY" id="qmR-q8-Sxl"/>
                 <constraint firstAttribute="centerX" secondItem="titleLabelID" secondAttribute="centerX" id="titleCenterX"/>
                 <constraint firstItem="titleLabelID" firstAttribute="top" secondItem="posterImageViewID" secondAttribute="bottom" constant="20" id="titleTop"/>
+                <constraint firstItem="g96-2d-ylz" firstAttribute="centerX" secondItem="l6N-XT-oYr" secondAttribute="centerX" id="vDk-8M-Xb3"/>
+                <constraint firstItem="l6N-XT-oYr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-48" id="zGt-5I-6Cj"/>
+                <constraint firstItem="g96-2d-ylz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-16" id="zML-f7-aeE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="139" y="136"/>
+            <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
         </view>
     </objects>
     <resources>

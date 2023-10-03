@@ -7,79 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F"
+            uuid = "4DC8A1FF-8A63-43CF-81F8-F77AC243AFC1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movieproject/Views/Cells/MovieTableViewCell.swift"
+            filePath = "movieproject/Network/NetworkServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewModel"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "952">
-               </Location>
-               <Location
-                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "980">
-               </Location>
-               <Location
-                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "1016">
-               </Location>
-               <Location
-                  uuid = "4FD5A9D3-037E-4EF1-82F7-F925B76B798F - d8503562d09b9cfb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "movieproject.MovieTableViewCell.viewModel.didset : Swift.Optional&lt;movieproject.MovieCellViewModel&gt;"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Views/Cells/MovieTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "1236">
-               </Location>
-            </Locations>
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchImage(from:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BF9B1F7-C276-4FBC-B9EE-6EB2098C5E21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movieproject/Network/NetworkServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchImage(from:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

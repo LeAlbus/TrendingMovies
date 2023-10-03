@@ -40,7 +40,8 @@ class NetworkServices {
           }
     }
     
-    func fetchPosterImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+    func fetchImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+print (url)
         AF.request(url).responseImage { response in
             switch response.result {
             case .success(let image):

@@ -12,6 +12,7 @@ struct Movie: Decodable {
     let year: String
     let description: String
     let posterURL: String
+    let backdropURL: String
     
     enum CodingKeys: String, CodingKey {
         
@@ -20,6 +21,7 @@ struct Movie: Decodable {
         case year = "release_date"
         case description = "overview"
         case posterURL = "poster_path"
+        case backdropURL = "backdrop_path"
     }
 }
 

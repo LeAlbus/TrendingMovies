@@ -20,6 +20,10 @@ class MovieDetailsViewModel {
         return movie.posterURL
     }
 
+    var backdropURL: String {
+        return movie.backdropURL
+    }
+    
     var description: String {
         return movie.description
     }
@@ -31,7 +35,16 @@ class MovieDetailsViewModel {
     func retrieveMoviePoster(completion: @escaping (UIImage?) -> Void) {
         
         if let fullURL = URL(string: APIConstants.posterURL(posterURL, size: .full)){
-            NetworkServices.shared.fetchPosterImage(from: fullURL) { image in
+            NetworkServices.shared.fetchImage(from: fullURL) { image in
+                completion(image)
+            }
+        }
+    }
+    
+    func retrieveBackdrop(completion: @escaping (UIImage?) -> Void) {
+        
+        if let fullURL = URL(string: APIConstants.backdropURL(backdropURL)) {
+            NetworkServices.shared.fetchImage(from: fullURL) { image in
                 completion(image)
             }
         }
