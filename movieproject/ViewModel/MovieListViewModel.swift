@@ -20,14 +20,19 @@ class MovieListViewModel {
     }
     
     func fetchMovies(completion: @escaping () -> Void) {
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2.0) { [weak self] in
-            self?.movies = [ // Mock data
-                Movie(id: 1, title: "Movie 1", year: "2020", description: "TEST DESCRIPTION", posterURL: URL(string: "https://example.com/movie1.jpg")!),
-                Movie(id: 2, title: "Movie 2", year: "2021", description: "TEST DESCRIPTION", posterURL: URL(string: "https://example.com/movie2.jpg")!),
-                Movie(id: 3, title: "Movie 3", year: "2019", description: "TEST DESCRIPTION", posterURL: URL(string: "https://example.com/movie3.jpg")!)
-            ]
-            DispatchQueue.main.async {
-                completion()
+        NetworkServices.shared.fetchMovies { [weak self] result in
+            switch result {
+            case .success(let movies):
+                self?.movies = movies
+                DispatchQueue.main.async {
+                    completion()
+                }
+            case .failure(let error):
+                print("Failed to fetch movies:", error)
+                //TODO: Handle error
+                DispatchQueue.main.async {
+                    completion()
+                }
             }
         }
     }
