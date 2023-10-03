@@ -9,13 +9,17 @@ import Foundation
 import Alamofire
 import AlamofireImage
 
-class NetworkServices {
-    
+protocol NetworkServicesProtocol {
+    func fetchMovies(page: Int, completion: @escaping (Result<[Movie], Error>) -> Void)
+}
+
+class NetworkServices: NetworkServicesProtocol{
+
     static let shared = NetworkServices()
 
     private init() {}
     
-    func fetchMovies(page: Int = 1, completion: @escaping (Result<[Movie], AFError>) -> Void) {
+    func fetchMovies(page: Int, completion: @escaping (Result<[Movie], Error>) -> Void) {
         
         let params: [String: Any] = [
             "include_adult": false,

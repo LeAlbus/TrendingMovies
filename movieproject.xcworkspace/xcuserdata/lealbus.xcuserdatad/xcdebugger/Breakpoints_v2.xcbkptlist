@@ -14,42 +14,10 @@
             filePath = "movieproject/Network/NetworkServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "fetchImage(from:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4DC8A1FF-8A63-43CF-81F8-F77AC243AFC1 - 2e98ba1682e6f4ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;__C.UIImage, Alamofire.AFError&gt;) -&gt; () in movieproject.NetworkServices.fetchImage(from: Foundation.URL, completion: (Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Network/NetworkServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "336">
-               </Location>
-               <Location
-                  uuid = "4DC8A1FF-8A63-43CF-81F8-F77AC243AFC1 - 2e98ba1682e6f4c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;__C.UIImage, Alamofire.AFError&gt;) -&gt; () in movieproject.NetworkServices.fetchImage(from: Foundation.URL, completion: (Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Network/NetworkServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "336">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,42 +30,10 @@
             filePath = "movieproject/Network/NetworkServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "fetchImage(from:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0BF9B1F7-C276-4FBC-B9EE-6EB2098C5E21 - 2e98ba1682e6f523"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;__C.UIImage, Alamofire.AFError&gt;) -&gt; () in movieproject.NetworkServices.fetchImage(from: Foundation.URL, completion: (Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Network/NetworkServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "260">
-               </Location>
-               <Location
-                  uuid = "0BF9B1F7-C276-4FBC-B9EE-6EB2098C5E21 - 2e98ba1682e6f500"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;__C.UIImage, Alamofire.AFError&gt;) -&gt; () in movieproject.NetworkServices.fetchImage(from: Foundation.URL, completion: (Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "movieproject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lealbus/Documents/Code/yassir/testProject/TrendingMovies/movieproject/Network/NetworkServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "260">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
