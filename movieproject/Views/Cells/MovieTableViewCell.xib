@@ -16,22 +16,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="PosterPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="imageViewID">
-                        <rect key="frame" x="8" y="5" width="309.5" height="464.5"/>
+                        <rect key="frame" x="8" y="5" width="311" height="466.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="imageViewID" secondAttribute="height" multiplier="2:3" id="gZ7-dD-fbx"/>
                             <constraint firstAttribute="width" constant="50" id="imgWidth"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabelID">
-                        <rect key="frame" x="325.5" y="8" width="83" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabelID">
+                        <rect key="frame" x="327" y="8" width="83" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yearLabelID">
-                        <rect key="frame" x="325.5" y="30.5" width="30.5" height="18"/>
+                        <rect key="frame" x="327" y="30.5" width="30.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="titleLabelID" secondAttribute="trailing" constant="4" id="4za-zl-ipm"/>
                     <constraint firstAttribute="bottom" secondItem="imageViewID" secondAttribute="bottom" constant="5" id="imgBottom"/>
                     <constraint firstItem="imageViewID" firstAttribute="leading" secondItem="contentViewID" secondAttribute="leading" constant="8" id="imgLeading"/>
                     <constraint firstItem="imageViewID" firstAttribute="top" secondItem="contentViewID" secondAttribute="top" constant="5" id="imgTop"/>

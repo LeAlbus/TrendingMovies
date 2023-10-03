@@ -21,7 +21,9 @@ class MovieTableViewCell: UITableViewCell {
             guard let viewModel = viewModel else { return }
             
             titleLabel.text = viewModel.title
-            yearLabel.text = viewModel.year
+            if let year = viewModel.year.split(separator: "-").first {
+                yearLabel.text = String(year)
+            }
             movieImageView.image = UIImage(named: "PosterPlaceholder")
         }
     }
