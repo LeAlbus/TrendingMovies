@@ -30,9 +30,16 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
 
         self.viewModel.delegate = self
         
+        configureLoadingFooter()
+        
         viewModel.fetchMovies { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+    
+    func configureLoadingFooter() {
+        let footerView = LoadingFooterView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        tableView.tableFooterView = footerView
     }
     
     //MARK: - DataSource
@@ -59,6 +66,18 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = viewModel.movieAtIndex(indexPath.row)
         viewModel.delegate?.didSelectMovie(movie)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.numberOfMovies() - 1 && !viewModel.isLoading {
+            tableView.tableFooterView?.isHidden = false
+            viewModel.fetchMovies {
+                tableView.reloadData()
+                if !self.viewModel.isLoading {
+                    tableView.tableFooterView?.isHidden = true
+                }
+            }
+        }
     }
 }
 

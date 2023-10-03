@@ -41,6 +41,7 @@
                     <constraint firstItem="yearLabelID" firstAttribute="top" secondItem="titleLabelID" secondAttribute="bottom" constant="2" id="yearTop"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="movieImageView" destination="imageViewID" id="movieImageViewConnection"/>
                 <outlet property="titleLabel" destination="titleLabelID" id="titleLabelConnection"/>

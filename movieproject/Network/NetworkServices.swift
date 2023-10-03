@@ -15,13 +15,13 @@ class NetworkServices {
 
     private init() {}
     
-    func fetchMovies(completion: @escaping (Result<[Movie], AFError>) -> Void) {
+    func fetchMovies(page: Int = 1, completion: @escaping (Result<[Movie], AFError>) -> Void) {
         
         let params: [String: Any] = [
             "include_adult": false,
             "include_video": false,
             "language": "en-US",
-            "page": 1,
+            "page": page,
             "sort_by": "popularity.desc"
         ]
         

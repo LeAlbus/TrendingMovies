@@ -14,28 +14,30 @@ protocol MovieListViewModelDelegate: AnyObject {
 class MovieListViewModel {
     
     weak var delegate: MovieListViewModelDelegate?
-    
+    private var paging: Int = 1
     private var movies: [Movie] = []
+    var isLoading: Bool = false
+    
     var reloadData: (() -> Void)?
 
-    init() {
-        //TODO: - Fetch movie list
-        self.fetchMovies {
-            print("FETCH MOVIES")
-        }
-    }
+    init() {}
     
     func fetchMovies(completion: @escaping () -> Void) {
-        NetworkServices.shared.fetchMovies { [weak self] result in
+        
+        guard !isLoading else { return }
+        isLoading = true
+        
+        NetworkServices.shared.fetchMovies(page: self.paging) { [weak self] result in
+            self?.isLoading = false
             switch result {
             case .success(let movies):
-                self?.movies = movies
+                self?.movies.append(contentsOf: movies)
+                self?.paging += 1
                 DispatchQueue.main.async {
                     completion()
                 }
             case .failure(let error):
                 print("Failed to fetch movies:", error)
-                //TODO: Handle error
                 DispatchQueue.main.async {
                     completion()
                 }
