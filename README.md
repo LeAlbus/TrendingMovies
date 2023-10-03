@@ -14,6 +14,15 @@ For the purpose of simplicity and immediate operability of this sample project, 
 ### Pods in Repo
 Typically, it's a common practice to exclude the Pods/ directory from version control to reduce repository size and avoid version conflicts. However, in this project, the pods are included in the repository. This decision was made to simplify the setup process for anyone trying out or testing the application. This ensures that the exact versions of the libraries are available to everyone and eliminates potential inconsistencies.
 
+### Test Coverage
+The test coverage of this application is on the lower side. This was a deliberate choice, driven by constraints in development time and an intent to prioritize showcasing certain skills over building a comprehensive test suite. The provided tests demonstrate essential aspects of my testing capabilities, including but not limited to:
+
+- Dependency injection for enhanced testability.
+- Code modularization to ensure components can be tested in isolation.
+- Utilizing design patterns that favor testable units of code.
+
+It's worth to recognize that while the tests show some of the application's reliability, a more extensive test suite would be crucial for a production-ready version of the app.
+
 # Future Improvements
 UI Enhancements: While the current user interface serves its purpose, there's always room for improvement. Introducing advanced design elements and animations could elevate the user experience.
 
